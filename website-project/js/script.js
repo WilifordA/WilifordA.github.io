@@ -3,7 +3,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Website is ready!');
     
-    // Add your JavaScript code here for interactivity
 
  
     const projectImages = document.querySelectorAll("#Project img");
@@ -26,8 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
             img.style.transform = "scale(1)";
         });
     });
-
-
 
     // Dynamic Effect 3: Add a button to toggle text visibility
     const toggleButton = document.createElement("button");
@@ -68,5 +65,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 500);
         });
     });
-    
+
 });
