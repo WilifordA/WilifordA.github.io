@@ -8,17 +8,59 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>Adam's Website</h1>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#Project" onclick="showTab('Project')">Project</a></li>
+            <li><a href="#Personal" onclick="showTab('Personal')">Personal</a></li>
+            <li><a href="#Hobbies" onclick="showTab('Hobbies')">Hobbies</a></li>
+
+        </ul>
+    </nav>
     <main>
-        <section>
-            <h2>About</h2>
+        <section id="Project" class="tab-content" padding="20px">
+            <h2>Project</h2>
+            
+            <img src="images/JSimg.jpg" alt="Project Image 1" width="300" height="200">
             <p>This is a simple website project created using HTML, CSS, and JavaScript.</p>
+            
+            <br></br>
+        </section>
+
+        <section id="Personal" class="tab-content" style="display: none;">
+            <img src="images/profImg.jpg" alt="Personal Image" width="300" height="200">
+            <h2>Personal</h2>
+            <p>Professional Experience:</p>
+            <ul>
+                <li>ENGR496-498</li>
+            </ul>
+            <p>Skills:</p>
+            <ul>
+                <li>JavaScript</li>
+                <li>HTML & CSS</li>
+                <li>Python</li>
+                <li>C++</li>
+
+                
+            </ul>
+            
+        </section>
+        <section id="Hobbies" class="tab-content" style="display: none;">
+            
+            <img src="images/lockdiagram.png" alt="Hobby Image" width="300" height="200">
+            <h2>Hobbies</h2>
+            <p>I enjoy rock climbing, playing video games, and locksmithing.</p>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2023 My Website</p>
-    </footer>
+    
     <script src="js/script.js"></script>
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.style.display = 'none');
+            document.getElementById(tabId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>

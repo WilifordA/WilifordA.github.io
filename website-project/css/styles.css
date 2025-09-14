@@ -2,32 +2,48 @@
 
 body {
     margin: 0;
+    
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+}
+
+body main {
+    padding: 20px;
 }
 
 header {
     height: 200px;
     background: #35424a;
     color: #ffffff;
-    padding: 10px 0;
     text-align: center;
 }
 
 
-nav {
-    margin: 20px 0;
+nav ul {
+    list-style: none; 
+    height : 20px;
+    padding: 10px;
+    display: flex; 
+    justify-content: left; 
+    gap: 20px;
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 15px;
+nav ul li {
+    display: inline; 
 }
 
-nav a:hover {
-    background: #e8491d;
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 15px; /* Add padding for clickable area */
+    color: #000; /* Set text color */
+    background-color: #f0f0f0; /* Add background color */
+    border-radius: 5px; /* Round the corners */
+    transition: background-color 0.3s ease; /* Add hover effect */
+}
+
+nav ul li a:hover {
+    background-color: #ddd; /* Change background on hover */
 }
 
 .container {
@@ -38,7 +54,6 @@ nav a:hover {
 
 footer {
     text-align: center;
-    padding: 20px 0;
     background: #35424a;
     color: #ffffff;
     position: relative;
@@ -68,11 +83,11 @@ footer {
     }
 
     nav a {
-        padding: 10px 0;
+       
         font-size: 1rem;
     }
 
     .container {
-        width: 100%; /* Full width for mobile */
+        width: 600px; /* Full width for mobile */
     }
 }
